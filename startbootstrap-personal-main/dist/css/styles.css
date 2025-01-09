@@ -11732,12 +11732,3 @@ html {
     left: -2vw;
   }
 }
-
-.contact .contact-img {
-  height: 80vw;
-  max-height: 15rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
