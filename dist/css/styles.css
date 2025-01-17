@@ -4605,9 +4605,11 @@ textarea.form-control-lg {
   line-height: 1;
   color: var(--bs-badge-color);
   text-align: center;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius);
+  width:100%;
+  overflow-wrap: anywhere;
 }
 .badge:empty {
   display: none;
@@ -11731,4 +11733,8 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+.contact-img {
+  max-width: 100%;
+  max-height: 100%;
 }
