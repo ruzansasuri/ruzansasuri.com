@@ -4605,11 +4605,9 @@ textarea.form-control-lg {
   line-height: 1;
   color: var(--bs-badge-color);
   text-align: center;
-  /* white-space: nowrap; */
+  white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius);
-  width:100%;
-  overflow-wrap: anywhere;
 }
 .badge:empty {
   display: none;
@@ -11734,7 +11732,8 @@ html {
     left: -2vw;
   }
 }
-.contact-img {
-  max-width: 100%;
-  max-height: 100%;
+
+.verticalLine {
+  background: linear-gradient(315deg, #1e30f3 0%, #e21e80 100%) no-repeat left/2px 100%;
+  background-position-x: calc(15% - 1px)
 }
