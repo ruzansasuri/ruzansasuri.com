@@ -11732,3 +11732,8 @@ html {
     left: -2vw;
   }
 }
+
+.verticalLine {
+  background: linear-gradient(315deg, #1e30f3 0%, #e21e80 100%) no-repeat left/2px 100%;
+  background-position-x: calc(15% - 1px)
+}
