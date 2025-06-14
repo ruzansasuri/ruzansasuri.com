@@ -4,7 +4,7 @@ const userInput = document.getElementById('userInput');
 const errorMessage = document.getElementById('errorMessage');
 
 // AWS Lambda Function URL
-const GATEWAY_URL = 'https://z835tnju1b.execute-api.us-east-2.amazonaws.com/default/';
+const GATEWAY_URL = 'https://z835tnju1b.execute-api.us-east-2.amazonaws.com/default/StycoBot';
 
 // Clear command keywords
 const CLEAR_COMMANDS = ['clear', 'reset', 'start over', 'new chat', 'clear chat', 'clear all'];
