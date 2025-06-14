@@ -1,7 +1,35 @@
-const chatMessages = document.getElementById('chatMessages');
-const chatForm = document.getElementById('chatForm');
-const userInput = document.getElementById('userInput');
-const errorMessage = document.getElementById('errorMessage');
+let chatMessages, chatForm, userInput, errorMessage;
+
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    chatMessages = document.getElementById('chatMessages');
+    chatForm = document.getElementById('chatForm');
+    userInput = document.getElementById('userInput');
+    errorMessage = document.getElementById('errorMessage');
+
+    // Check if all required elements exist
+    if (!chatMessages || !chatForm || !userInput || !errorMessage) {
+        console.error('One or more required elements are missing from the DOM');
+        return;
+    }
+
+    // Clear any existing messages
+    while (chatMessages.firstChild) {
+        chatMessages.removeChild(chatMessages.firstChild);
+    }
+
+    // Initialize the chat with welcome message
+    addMessage(WELCOME_MESSAGE, false);
+
+    // Set up event handlers
+    chatForm.addEventListener('submit', (e) => handleSubmit(e));
+    userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            handleSubmit(e);
+        }
+    });
+});
 
 // AWS Lambda Function URL
 const GATEWAY_URL = 'https://vdc8sf6h7c.execute-api.us-east-2.amazonaws.com/Prod/StycoBot';
@@ -28,6 +56,12 @@ function clearChat() {
 }
 
 function addMessage(message, isUser = false) {
+    if (!chatMessages) {
+        console.error('chatMessages element not found');
+        return;
+    }
+    
+    // Create the message element
     const messageDiv = document.createElement('div');
     messageDiv.className = `chatbot-message ${isUser ? 'user' : 'bot'}`;
     
@@ -80,9 +114,33 @@ async function sendMessage(message) {
         }
 
         const data = await response.json();
+        
+        // Debug logging to see the response structure
+        console.log('Response data:', data);
+        
         removeTypingIndicator();
-        addMessage(data.response);
+        
+        // Handle different response structures
+        if (data && typeof data === 'object') {
+            // If response is an object with a response property
+            if (data.response) {
+                addMessage(data.response);
+            } 
+            // If response is an object with a message property
+            else if (data.message) {
+                addMessage(data.message);
+            }
+            // If response is just a string
+            else if (typeof data === 'string') {
+                addMessage(data);
+            }
+            // If response is an array of messages
+            else if (Array.isArray(data)) {
+                data.forEach(msg => addMessage(msg));
+            }
+        }
     } catch (error) {
+        console.error('Error:', error);
         removeTypingIndicator();
         errorMessage.textContent = 'Sorry, there was an error processing your message. Please try again.';
         errorMessage.style.display = 'block';
@@ -93,7 +151,11 @@ async function sendMessage(message) {
 }
 
 async function handleSubmit(e) {
-    if (e) e.preventDefault(); // Prevent form submission
+    // Prevent form submission in all cases
+    if (e && e.preventDefault) {
+        e.preventDefault();
+    }
+    
     const message = userInput.value.trim();
     
     if (!message) return;
