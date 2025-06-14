@@ -69,7 +69,8 @@ async function sendMessage(message) {
         const response = await fetch(GATEWAY_URL, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'content-type': 'application/json',
+                'origin': 'https://ruzansasuri.com'
             },
             body: JSON.stringify({ message }),
         });
