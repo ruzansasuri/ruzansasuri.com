@@ -128,7 +128,11 @@ async function sendMessage(message) {
             } 
             // If response is an object with a message property
             else if (data.message) {
-                addMessage(data.message);
+                if (data.message.answer) {
+                    addMessage(data.message.answer);
+                } else {
+                    addMessage(data.message);
+                }
             }
             // If response is just a string
             else if (typeof data === 'string') {
