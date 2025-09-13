@@ -38,7 +38,7 @@ const GATEWAY_URL = 'https://vdc8sf6h7c.execute-api.us-east-2.amazonaws.com/Prod
 const CLEAR_COMMANDS = ['clear', 'reset', 'start over', 'new chat', 'clear chat', 'clear all'];
 
 // Original welcome message
-const WELCOME_MESSAGE = "Hello! I'm StycoBot. Ask me about Ruzan's age, favorite food or favorite quote.";
+const WELCOME_MESSAGE = "Hello! I'm StycoBot. I can tell you all about Ruzan's skills and professional experiences. Please note that I can only answer questions based on Ruzan's resume, cover letter and (later)Linkedin Profile. How can I assist you today?";
 
 function isClearCommand(message) {
     return CLEAR_COMMANDS.some(cmd => message.toLowerCase().includes(cmd));
