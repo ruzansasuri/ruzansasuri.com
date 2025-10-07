@@ -1,0 +1,5 @@
+.vscode/
+
+# react stuff
+node_modules/
+dist/
