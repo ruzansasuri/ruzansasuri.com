@@ -5,13 +5,23 @@ const closeBtn = document.getElementById("close-react-modal");
 const iframe = document.getElementById("react-iframe");
 const loader = document.getElementById('iframe-loader');
 
-// Open modal and lazy-load React app
+const IS_PROD = true; // Change this if you want to test a locally served version of the metrics app
+
+console.log('Current hostname:', window.location.hostname);
+console.log('Current protocol:', window.location.protocol);
+console.log('Full URL:', window.location.href);
+
+const REACT_APP_URL = IS_PROD 
+  ? 'https://styco-bot-metrics.vercel.app/' // Production
+  : 'http://localhost:5000'; // Local development
+
+  // Open modal and lazy-load React app
 openBtn.addEventListener("click", () => { 
   // Show loader
   modal.style.display = 'flex';
   loader.style.display = 'block';
   iframe.classList.remove('loaded');
-  iframe.src = "http://localhost:500/index.html"; // set path to your React build
+  iframe.src = REACT_APP_URL; // set path to your React build
   modal.style.display = "flex";
 
   iframe.addEventListener('error', function handleError() {
