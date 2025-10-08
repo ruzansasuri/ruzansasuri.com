@@ -3,9 +3,14 @@ const openBtn = document.getElementById("open-react-panel");
 const modal = document.getElementById("react-modal");
 const closeBtn = document.getElementById("close-react-modal");
 const iframe = document.getElementById("react-iframe");
+const loader = document.getElementById('iframe-loader');
 
 // Open modal and lazy-load React app
-openBtn.addEventListener("click", () => {
+openBtn.addEventListener("click", () => { 
+  // Show loader
+  modal.style.display = 'flex';
+  loader.style.display = 'block';
+  iframe.classList.remove('loaded');
   iframe.src = "http://localhost:500/index.html"; // set path to your React build
   modal.style.display = "flex";
 
@@ -16,7 +21,9 @@ openBtn.addEventListener("click", () => {
     standInImg.style.width = '100%';
     standInImg.style.height = '100%';
     standInImg.style.objectFit = 'contain';
-    
+
+    loader.style.display = 'none';
+    iframe.classList.add('loaded');
     iframe.parentNode.replaceChild(standInImg, iframe);
   }, { once: true }); // Use once: true to auto-remove listener
   
@@ -38,6 +45,8 @@ openBtn.addEventListener("click", () => {
   
   // Clear timeout on successful load
   iframe.addEventListener('load', () => {
+    loader.style.display = 'none';
+    iframe.classList.add('loaded');
     clearTimeout(timeoutId);
   }, { once: true });
 });

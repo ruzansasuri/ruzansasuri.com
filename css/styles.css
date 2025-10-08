@@ -13465,3 +13465,33 @@ html {
   border: none;
   border-radius: 10px;
 }
+
+/* For loading gear */
+.iframe-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.iframe-loader img {
+    width: 80px;  /* Adjust size as needed */
+    height: 80px;
+}
+
+.iframe-loader p {
+    margin-top: 16px;
+    font-size: 18px;
+    color: #666;
+}
+
+#react-iframe {
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+#react-iframe.loaded {
+    opacity: 1;
+}
