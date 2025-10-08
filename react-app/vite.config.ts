@@ -1,15 +1,40 @@
-import react from '@vitejs/plugin-react';
-import path from 'path';
-import { defineConfig } from 'vite';
+
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [react()],
+  
+  // Base URL - use '/' for Netlify/Vercel since it'll be at the root of its own domain
+  base: '/',
+  
+  // Build options
   build: {
-    outDir: path.resolve(__dirname, '../dist'), // output goes to root/dist
-    emptyOutDir: true,                           // clear dist on each build
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false, // Set to true if you want source maps in production
+    
+    // Optimize chunk size
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+        },
+      },
+    },
   },
-  resolve: {
-    dedupe: ["react", "react-dom"], // <- important
+  
+  // Development server options
+  server: {
+    port: 5173,
+    strictPort: false,
+    host: true, // Listen on all addresses
   },
-  base: './',  
-});
+  
+  // Preview server options (for testing production build locally)
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: true,
+  },
+})
