@@ -13414,3 +13414,54 @@ html {
   margin-top: 8px;
   text-align: center;
 }
+
+#open-react-panel {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+#open-react-panel:hover {
+  opacity: 0.85;
+}
+
+.react-modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-modal-content {
+  width: 90%;
+  height: 90%;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.react-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.react-modal iframe {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+}

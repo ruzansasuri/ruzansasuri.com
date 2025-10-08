@@ -176,7 +176,9 @@ async function handleSubmit(e) {
 }
 
 // Add form submit handler
-chatForm.addEventListener('submit', handleSubmit);
+if (chatForm) {
+    chatForm.addEventListener('submit', handleSubmit);
+}
 
 // Handle Enter key
 userInput.addEventListener('keypress', (e) => {
