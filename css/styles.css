@@ -13288,7 +13288,6 @@ html {
   background-position-x: calc(15% - 1px)
 }
 
-
 .chatbot-container {
   max-width: 800px;
   margin: 40px auto;
@@ -13298,6 +13297,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 600px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chatbot-header {
@@ -13615,4 +13615,41 @@ html {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* 1. The Expanded State */
+.chatbot-container.is-expanded {
+    position: fixed !important;
+    /* Adjust 'top' to match your navbar height (usually 56px or 72px) */
+    top: 72px; 
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 72px); /* Fill the rest of the window */
+    
+    z-index: 2000; /* Sits above the page content but stays below nav if needed */
+    margin: 0 !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Fix the Internal Layout when Expanded */
+.chatbot-container.is-expanded .chatbot-messages,
+.chatbot-container.is-expanded .chatbot-input-area {
+    width: 100%;
+    max-width: 900px; /* Optional: Keeps text readable on ultra-wide monitors */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 3. Mobile Specific Tweaks */
+@media (max-width: 991px) {
+    .chatbot-container.is-expanded {
+        top: 60px; /* Adjust for mobile navbar height */
+        height: calc(100vh - 60px);
+    }
 }

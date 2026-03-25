@@ -438,3 +438,22 @@ userInput.addEventListener('keypress', (e) => {
         handleSubmit();
     }
 });
+
+function toggleExpand() {
+    const container = document.querySelector('.chatbot-container');
+    const icon = document.getElementById('expand-icon');
+    const isExpanded = container.classList.toggle('is-expanded');
+
+    if (isExpanded) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        // Swap icon to 'contract'
+        document.getElementById('expand-icon').classList.replace('bi-arrows-angle-expand', 'bi-arrows-angle-contract');
+        // Stop the background from scrolling
+        document.body.style.overflow = 'hidden';
+    } else {
+        // Swap icon back to 'expand'
+        document.getElementById('expand-icon').classList.replace('bi-arrows-angle-contract', 'bi-arrows-angle-expand');
+        // Restore background scrolling
+        document.body.style.overflow = '';
+    }
+}
