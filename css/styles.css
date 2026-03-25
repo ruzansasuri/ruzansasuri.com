@@ -13310,6 +13310,8 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
+  top: -45px;
+  overflow: visible !important;
 }
 
 .chatbot-messages {
@@ -13494,4 +13496,123 @@ html {
 
 #react-iframe.loaded {
     opacity: 1;
+}
+
+#cv-download-btn {
+    min-width: 140px; /* Ensures the button doesn't snap smaller */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 32px;
+    transition: background-color 0.3s ease; /* Remove 'all' to avoid layout jumping */
+    
+    /* Darker translucent base (Deep Charcoal/Navy) */
+    background: rgba(15, 23, 42, 0.4); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Subtle border to define the shape against the gradient */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0 !important; /* Off-white text for better readability on dark */
+    
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+#cv-download-btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+#cv-download-btn:hover {
+    /* Slightly more opaque and "lifted" on hover */
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#cv-download-btn:active {
+    transform: translateY(0);
+}
+#cv-download-btn.btn-danger {
+    background: rgba(220, 53, 69, 0.8) !important; /* Semi-transparent Red */
+    border-color: #dc3545;
+    color: white !important;
+}
+
+/* Container for positioning the tooltip relative to the button */
+.cv-btn-container {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.cv-error-tooltip {
+    background: rgba(15, 23, 42, 0.95);  
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    border-radius: 6px;
+    bottom: 130%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: #ff8e8e;
+    display: block !important; /* Forces it to exist in the layout */
+    font-size: 0.75rem;
+    opacity: 0;
+    padding: 8px 12px;    
+    pointer-events: none; /* Mouse goes 'through' it to the button */
+    position: absolute;
+    right: 0;    
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 9999; /* Make sure it's on top */
+}
+
+/* Only show the tooltip when hovering the button IF it has an error */
+.cv-btn-container:hover .btn-error-state ~ .cv-error-tooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0);
+}
+
+.cv-error-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(15, 23, 42, 0.95) transparent transparent transparent;
+}
+
+/* The Error Look for the Button */
+.btn-error-state {
+    background: rgba(180, 35, 50, 0.4) !important;
+    border-color: rgba(255, 100, 100, 0.4) !important;
+    color: #ffcfcf !important;
+    min-width: 100px;
+}
+
+.cv-status-popup {
+    position: absolute;
+    top: 45px; /* Adjust based on header height */
+    right: 10px;
+    background: rgba(220, 53, 69, 0.9); /* Darker Red */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
 }

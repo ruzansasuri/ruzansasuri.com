@@ -55,6 +55,16 @@
                                     <div class="chatbot-header">
                                         <i class="bi bi-robot"></i>
                                         StycoBot
+                                        <div class="cv-btn-container ms-auto">
+                                            <button 
+                                                id="cv-download-btn" 
+                                                type="button" 
+                                                onclick="downloadCV(event)" 
+                                                class="btn btn-sm">
+                                                <i class="bi bi-download"></i> Download CV
+                                            </button>
+                                            <div id="cv-error-msg" class="cv-error-tooltip"></div>
+                                        </div>
                                     </div>
                                     <div class="chatbot-messages" id="chatMessages">
                                         <div class="chatbot-message bot">
@@ -62,6 +72,9 @@
                                                 <!-- Welcome message will be set by JavaScript -->
                                             </div>
                                         </div>
+                                    </div>
+                                    <div id="suggested-section">
+                                        <div id="suggested-chips" class="d-flex flex-wrap gap-2 p-2"></div>
                                     </div>
                                     <div class="chatbot-input-area">    
                                         <form id="chatForm">
