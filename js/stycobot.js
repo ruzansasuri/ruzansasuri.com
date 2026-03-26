@@ -292,18 +292,30 @@ async function downloadCV(event) {
         }
 
     } catch (error) {
+        const isMobile = window.innerWidth <= 991;
+
         // 1. Enter Error State
         btn.classList.add('btn-error-state');
         btn.disabled = true;
         btn.innerHTML = `<i class="bi bi-info-circle"></i> Error`;
 
-        let secondsLeft = 5;
+        errorDiv.classList.add('show-error');
+        errorDiv.classList.remove('user-dismissed');
 
+        errorDiv.onclick = () => {
+            errorDiv.classList.add('user-dismissed');
+        };
+
+        let secondsLeft = 5;
+        
         const countdown = setInterval(() => {
             secondsLeft--;
             
             if (secondsLeft > 0) {
-                errorDiv.textContent = `${error.message} (Resets in ${secondsLeft}s)`;
+                errorDiv.textContent = isMobile 
+                    ? `Download failed. Retrying in ${secondsLeft}s...` 
+                    : `${error.message} (Resets in ${secondsLeft}s)`;
+
             } else {
                 // 2. THE FIX: Clear and Reset the MOMENT we hit zero
                 clearInterval(countdown);
@@ -319,7 +331,10 @@ async function downloadCV(event) {
         }, 1000);
 
         // Initial text set
-        errorDiv.textContent = `${error.message} (Resets in ${secondsLeft}s)`;
+        errorDiv.textContent = isMobile 
+            ? `Download failed. Retrying in ${secondsLeft}s...` 
+            : `${error.message} (Resets in ${secondsLeft}s)`;
+
     }
 }
 // ─────────────────────────────────────────────
