@@ -50,21 +50,21 @@ document.addEventListener('DOMContentLoaded', () => {
 // Suggested questions (Lambda A)
 // ─────────────────────────────────────────────
 async function loadSuggestedQuestions() {
-    const chipsEl = document.getElementById('suggested-chips');
-    if (!chipsEl) return;
+    const chipsElem = document.getElementById('suggested-chips');
+    if (!chipsElem) return;
 
     try {
         const res = await fetch(SUGGESTED_QUESTIONS_URL);
         const data = await res.json();
         if (!data.questions || !data.questions.length) {
-            chipsEl.innerHTML = '';
+            chipsElem.innerHTML = '';
             return;
         }
-        chipsEl.innerHTML = data.questions
+        chipsElem.innerHTML = data.questions
             .map(q => `<button class="suggested-chip" onclick="useChip(this)">${q}</button>`)
             .join('');
     } catch {
-        chipsEl.innerHTML = '';
+        chipsElem.innerHTML = '';
     }
 }
 
@@ -118,7 +118,7 @@ async function downloadCV(event) {
             errorDiv.classList.add('user-dismissed');
             secondsLeft = 0
         };
-        
+
         const countdown = setInterval(() => {
             secondsLeft--;
             
