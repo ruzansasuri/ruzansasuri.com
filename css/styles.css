@@ -13288,7 +13288,6 @@ html {
   background-position-x: calc(15% - 1px)
 }
 
-
 .chatbot-container {
   max-width: 800px;
   margin: 40px auto;
@@ -13298,6 +13297,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 600px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chatbot-header {
@@ -13310,6 +13310,8 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
+  top: -45px;
+  overflow: visible !important;
 }
 
 .chatbot-messages {
@@ -13494,4 +13496,240 @@ html {
 
 #react-iframe.loaded {
     opacity: 1;
+}
+
+#cv-download-btn {
+    min-width: 140px; /* Ensures the button doesn't snap smaller */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 32px;
+    transition: background-color 0.3s ease; /* Remove 'all' to avoid layout jumping */
+    
+    /* Darker translucent base (Deep Charcoal/Navy) */
+    background: rgba(15, 23, 42, 0.4); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Subtle border to define the shape against the gradient */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0 !important; /* Off-white text for better readability on dark */
+    
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+#cv-download-btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+#cv-download-btn:hover {
+    /* Slightly more opaque and "lifted" on hover */
+    background: rgba(15, 23, 42, 0.7);
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#cv-download-btn:active {
+    transform: translateY(0);
+}
+#cv-download-btn.btn-danger {
+    background: rgba(220, 53, 69, 0.8) !important; /* Semi-transparent Red */
+    border-color: #dc3545;
+    color: white !important;
+}
+
+/* Container for positioning the tooltip relative to the button */
+.cv-btn-container {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.cv-error-tooltip {
+    background: rgba(15, 23, 42, 0.95);  
+    border: 1px solid rgba(255, 107, 107, 0.4);
+    border-radius: 6px;
+    bottom: 130%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    color: #ff8e8e;
+    display: block !important; /* Forces it to exist in the layout */
+    font-size: 0.75rem;
+    opacity: 0;
+    padding: 8px 12px;    
+    pointer-events: none; /* Mouse goes 'through' it to the button */
+    position: absolute;
+    right: 0;    
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: 9999; /* Make sure it's on top */
+}
+
+/* Only show the tooltip when hovering the button IF it has an error */
+.cv-btn-container:hover .btn-error-state ~ .cv-error-tooltip {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0);
+}
+
+.cv-error-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(15, 23, 42, 0.95) transparent transparent transparent;
+}
+
+/* The Error Look for the Button */
+.btn-error-state {
+    background: rgba(180, 35, 50, 0.4) !important;
+    border-color: rgba(255, 100, 100, 0.4) !important;
+    color: #ffcfcf !important;
+    min-width: 100px;
+}
+
+.cv-status-popup {
+    position: absolute;
+    top: 45px; /* Adjust based on header height */
+    right: 10px;
+    background: rgba(220, 53, 69, 0.9); /* Darker Red */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* StycoBot Expanded State */
+.chatbot-container.is-expanded {
+    position: fixed !important;
+    /* Adjust 'top' to match your navbar height (usually 56px or 72px) */
+    top: 72px; 
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 72px); /* Fill the rest of the window */
+    
+    z-index: 2000; /* Sits above the page content but stays below nav if needed */
+    margin: 0 !important;
+    max-width: none !important;
+    border-radius: 0 !important;
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fix the Internal Layout when StycoBot Expanded */
+.chatbot-container.is-expanded .chatbot-messages,
+.chatbot-container.is-expanded .chatbot-input-area {
+    width: 100%;
+    max-width: 900px; /* Optional: Keeps text readable on ultra-wide monitors */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* StycoBot Mobile View */
+@media (max-width: 991px) {
+    /*  Ensure the Navbar is the "Boss" of the screen */
+    .navbar {
+        z-index: 1100 !important; /* Higher than the StycoBot's 1050 */
+        position: sticky;
+        top: 0;
+    }
+
+    #expand-chat-btn {
+        display: none !important; /* Hide the button because it's already expanded */
+    }
+
+    .card-body.p-5 {
+        padding: 0 !important; /* Fixes the 'popping out' horizontal scroll */
+    }
+
+    .chatbot-container {
+        position: fixed !important;
+        top: 70px; /* Adjust to match your navbar height */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: calc(100vh - 70px);
+        z-index: 1050;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0 !important;
+        margin: 0 !important;
+    }
+
+    .cv-btn-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Keeps button right-aligned */
+        margin-left: auto;     /* Pushes the whole group to the right */
+    }
+
+    /* Turn the Tooltip into a 'Status Bar' */
+    .cv-error-tooltip {
+        /* 1. Reset Desktop Styles */
+        position: fixed !important;
+        top: auto !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) translateY(100px) !important; /* Start off-screen */
+        
+        /* 2. Snack Bar Look */
+        bottom: 20px !important; /* Float above the bottom of the screen */
+        width: 90% !important;
+        max-width: 400px;
+        background: #323232 !important; /* Dark slate (standard Toast color) */
+        color: #ffffff !important;
+        padding: 12px 16px !important;
+        border-radius: 8px !important;
+        font-size: 14px !important;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+        z-index: 9999 !important; /* Above everything else */
+        border: none !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 0;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s !important;
+        pointer-events: auto;
+    }
+
+    /* Show it when the JS adds the class */
+    .cv-error-tooltip.show-error {
+        opacity: 1 !important;
+        transform: translateX(-50%) translateY(0) !important; /* Slide up into view */
+    }
+
+    /* Add a little red indicator dot to the snackbar */
+    .cv-error-tooltip::before {
+        content: '●';
+        color: #ff5252;
+        margin-right: 8px;
+    }
+
+    .cv-error-tooltip.user-dismissed {
+        display: none !important;
+    }
 }
