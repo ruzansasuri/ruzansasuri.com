@@ -13298,6 +13298,7 @@ html {
   flex-direction: column;
   height: 600px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 .chatbot-header {
@@ -13316,6 +13317,7 @@ html {
 
 .chatbot-messages {
   flex: 1;
+  min-height: 0;
   padding: 20px;
   overflow-y: auto;
   background: #f8f9fa;
@@ -13624,14 +13626,12 @@ html {
     top: 72px; 
     left: 0;
     right: 0;
-    width: 100vw;
     height: calc(100vh - 72px); /* Fill the rest of the window */
-    
+    height: calc(100dvh - 72px);
     z-index: 2000; /* Sits above the page content but stays below nav if needed */
     margin: 0 !important;
     max-width: none !important;
     border-radius: 0 !important;
-
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -13669,7 +13669,6 @@ html {
       left: 0;
       right: 0;
       bottom: 0;
-      width: 100vw;
       height: calc(100dvh - 70px); /* avoids iOS Safari address-bar jump */
       z-index: 1050;
       background: white;
@@ -13737,4 +13736,10 @@ html {
     min-height: 44px;
     height: 44px;
   }
+}
+
+#suggested-section {
+    flex-shrink: 0;
+    max-height: 96px;      /* roughly 2 rows of chips */
+    overflow-y: auto;
 }
