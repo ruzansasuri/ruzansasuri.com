@@ -115,6 +115,7 @@ async function downloadCV(event) {
         let secondsLeft = 5;
         
         errorDiv.onclick = () => {
+            errorDiv.style.display = 'none';
             errorDiv.classList.add('user-dismissed');
             secondsLeft = 0
         };
@@ -253,17 +254,6 @@ async function handleSubmit(e) {
         await sendMessage(message);
     }
 }
-
-if (chatForm) {
-    chatForm.addEventListener('submit', handleSubmit);
-}
-
-userInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-        e.preventDefault();
-        handleSubmit();
-    }
-});
 
 function toggleExpand() {
     const container = document.querySelector('.chatbot-container');
