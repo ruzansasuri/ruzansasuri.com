@@ -1,0 +1,376 @@
+[33mcommit 3934c18f195ccdc471d59316145db52cd6aaa1d1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mquick-cleanup[m[33m, [m[1;31morigin/quick-cleanup[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Aug 4 16:10:35 2026 -0700
+
+    Fixed some inaccuricies
+
+[33mcommit a42940c3a4cddde075ac3a15069f9ac42a65cf78[m[33m ([m[1;31morigin/gh-pages[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mgh-pages[m[33m)[m
+Merge: 3b46b93 bd04967
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Jul 30 12:50:52 2026 -0700
+
+    Merge pull request #36 from ruzansasuri/stycobot-pushed-out-input
+    
+    CSS changes to fix mmobile view
+
+[33mcommit bd049671672f95008446af1c435354aa80f3f1c0[m[33m ([m[1;31morigin/stycobot-pushed-out-input[m[33m, [m[1;32mstycobot-pushed-out-input[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Jul 30 12:44:39 2026 -0700
+
+    CSS changes to fix mmobile view
+
+[33mcommit 3b46b9319c2f305aec157b988344549396a28e54[m
+Merge: 11b60f3 7f2793f
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Jul 30 12:26:23 2026 -0700
+
+    Merge pull request #35 from ruzansasuri/stycobot-better-mobile-experience
+    
+    Fixed CSS and JS to further improve UI on phones
+
+[33mcommit 7f2793fca78c82e3025ccc2d6b37fa408d6f7924[m[33m ([m[1;31morigin/stycobot-better-mobile-experience[m[33m, [m[1;32mstycobot-better-mobile-experience[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Jul 30 12:22:06 2026 -0700
+
+    Fixed CSS and JS to further improve UI on phones
+
+[33mcommit 11b60f3d27019db5e470ec3b3bd5d3eec95d9e0c[m
+Merge: b143e45 e4851c6
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Mar 25 17:12:04 2026 -0700
+
+    Merge pull request #34 from ruzansasuri/sasuri/phase-2
+    
+    Sasuri/phase 2
+
+[33mcommit e4851c6604f97d1c9e1f05339b6bee6e1aa9307b[m[33m ([m[1;31morigin/sasuri/phase-2[m[33m, [m[1;32msasuri/phase-2[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Mar 25 17:11:02 2026 -0700
+
+    Phase 2: MR tweaks 2
+
+[33mcommit 91ce321733e12220a822ad5734df93c0560e102b[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Mar 25 17:10:08 2026 -0700
+
+    Phase 2: some MR tweaks
+
+[33mcommit 9169aac8c12265de466a5522909b7f6f8e1f058b[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Mar 25 17:04:23 2026 -0700
+
+    Phase 2: Better Mobile View
+
+[33mcommit 90b72eada10d82c28270feae945762700a9d94ca[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Mar 25 16:18:38 2026 -0700
+
+    Phase 2: expanded view
+
+[33mcommit bda2080b3f8ebff526823c2dc897b7f2eaed70d3[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Mar 25 16:04:57 2026 -0700
+
+    Phase 2: fixed download button
+
+[33mcommit b143e45411d6767c8c8c17bddad7eef29a136fe4[m
+Merge: 60cfc47 56ce35e
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Dec 2 15:47:06 2025 -0800
+
+    Merge pull request #33 from ruzansasuri/sasuri/december-update
+    
+    December update
+
+[33mcommit 56ce35e6bba728e142752306321b8bea0139a785[m[33m ([m[1;32msasuri/december-update[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Dec 2 15:45:37 2025 -0800
+
+    December update
+
+[33mcommit 60cfc479c8e811270ebdbbe1e7decdf4aa329052[m
+Merge: 462bfea 5a7234d
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Oct 8 14:12:32 2025 -0700
+
+    Merge pull request #32 from ruzansasuri/add-vercel-int
+    
+    Added vercel integrations
+
+[33mcommit 5a7234d5b27defcc0b6e51b4917b6615219bda54[m[33m ([m[1;32madd-vercel-int[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Oct 8 14:11:42 2025 -0700
+
+    Added vercel integrations
+
+[33mcommit 462bfea9e1c6b0dadbbfd3c7b296a346977aa7fd[m
+Merge: 71c257a faf2004
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Oct 8 13:09:26 2025 -0700
+
+    Merge pull request #31 from ruzansasuri/add-loading
+    
+    added loading
+
+[33mcommit faf200482d99e29e77d1cf05e09ead26e236397a[m[33m ([m[1;32madd-loading[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Oct 8 13:08:48 2025 -0700
+
+    added loading
+
+[33mcommit 71c257a1ac5802600026fb641137a94aa9defab1[m
+Merge: 8060bb9 b2dab42
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Oct 8 12:47:44 2025 -0700
+
+    Merge pull request #30 from ruzansasuri/local-running-metrics-view
+    
+    Local running metrics view
+
+[33mcommit b2dab4295881d2abc3446035e47a8a32d28bf870[m[33m ([m[1;32mlocal-running-metrics-view[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Oct 8 12:46:34 2025 -0700
+
+    added toml file and some fall-backs if the react app is not runnnig
+
+[33mcommit 511289c500e791b82449a6f6b4fc426458704e21[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Oct 7 15:30:43 2025 -0700
+
+    Added a locally working react app that displays metrics in an iFrame
+
+[33mcommit 8060bb983505ed69d13ca6c3a5c9a2451511e0c0[m
+Merge: 3ad367b 9ae66ca
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Sep 12 18:27:57 2025 -0700
+
+    Merge pull request #29 from ruzansasuri/styco-bot/some-fixes
+    
+    fixed some errors
+
+[33mcommit 9ae66ca196253279d054b2a12d72725a89be1a42[m[33m ([m[1;32mstyco-bot/some-fixes[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Sep 12 18:27:31 2025 -0700
+
+    fixed some errors
+
+[33mcommit 3ad367b9502f6144646eec44bcc678d379af1899[m
+Merge: 4a3e170 23abf33
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Sep 12 18:06:08 2025 -0700
+
+    Merge pull request #28 from ruzansasuri/stycobot-v2
+    
+    Stycobot is open for business
+
+[33mcommit 23abf334a765d6becb6de91d18bc6a2ee961025e[m[33m ([m[1;32mstycobot-v2[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Sep 12 18:05:15 2025 -0700
+
+    Stycobot is open for business
+
+[33mcommit 4a3e170abc00517d706335d87dea06248f85d556[m
+Merge: e1c7f5b 562d67e
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Sep 12 16:18:15 2025 -0700
+
+    Merge pull request #27 from ruzansasuri/stycobot-under-maintainance
+    
+    put Stycobot under maintainance
+
+[33mcommit 562d67e51e0e97f1c7fcdebea007f726d04514d1[m[33m ([m[1;32mstycobot-under-maintainance[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Sep 12 16:17:41 2025 -0700
+
+    put Stycobot under maintainance
+
+[33mcommit e1c7f5b7f3b66f584c401ef4f30abc053b44636c[m
+Merge: e9afa70 7fa0eed
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Aug 28 16:14:15 2025 -0700
+
+    Merge pull request #26 from ruzansasuri/gh-pages-add-machine-learning
+    
+    Gh pages add machine learning
+
+[33mcommit 7fa0eedca1760aeec3e8bd0ff0382b8a1fd9b20f[m[33m ([m[1;31morigin/gh-pages-add-machine-learning[m[33m, [m[1;32mgh-pages-add-machine-learning[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Aug 28 16:12:52 2025 -0700
+
+    added machine learning project to projects page
+
+[33mcommit 3e0a9f5279449265c730fea7ef0445a8cdf9508d[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu Aug 28 16:08:25 2025 -0700
+
+    Removed some unecessary title tags
+
+[33mcommit e9afa70b9b8dac0311043c09908668bfdd492027[m
+Merge: f9b8b84 e241c81
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Sat Jun 14 00:43:45 2025 -0700
+
+    Merge pull request #25 from ruzansasuri/feature/message-blank
+    
+    fix messages being blank
+
+[33mcommit e241c8137ae5898c4c21aa24e576307d94723186[m[33m ([m[1;32mfeature/message-blank[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Sat Jun 14 00:42:08 2025 -0700
+
+    fix messages being blank
+
+[33mcommit f9b8b84ed558f4b95e78a9276f8e2c17537ffae6[m
+Merge: 2380471 2a128fa
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Sat Jun 14 00:22:57 2025 -0700
+
+    Merge pull request #24 from ruzansasuri/feature/url-again
+    
+    url
+
+[33mcommit 2a128fa8b19265815be30b2071c743ed69242800[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Sat Jun 14 00:22:13 2025 -0700
+
+    url
+
+[33mcommit 2380471d6436777ad857d86e6935cc15b4235116[m
+Merge: 7b4565e bc9d16c
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 23:55:29 2025 -0700
+
+    Merge pull request #23 from ruzansasuri/feature/change-url
+    
+    correct url
+
+[33mcommit bc9d16c40d98d655c63bb17cc80dc03e870a71cf[m[33m ([m[1;32mfeature/change-url[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 23:55:06 2025 -0700
+
+    correct url
+
+[33mcommit 7b4565eb19fa07a473106a1e173ee0d0441551d5[m
+Merge: 84f703c b8f4b1d
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 22:52:30 2025 -0700
+
+    Merge pull request #22 from ruzansasuri/back-to-old-url
+    
+    fix url again
+
+[33mcommit b8f4b1d7a262a2fab773e1b529a3d88981dbf35a[m[33m ([m[1;32mback-to-old-url[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 22:52:02 2025 -0700
+
+    fix url again
+
+[33mcommit 84f703cc3b9ed6d0654055046706fc3e4f8c38b3[m
+Merge: 54f6bec 05a4b8b
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 22:15:48 2025 -0700
+
+    Merge pull request #21 from ruzansasuri/change-url
+    
+    correct url
+
+[33mcommit 05a4b8bca677e6702608a5c182b685ac440a4ebb[m[33m ([m[1;32mchange-url[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 22:15:23 2025 -0700
+
+    correct url
+
+[33mcommit 54f6bec63456775666ae7d374df30a672ade2d85[m
+Merge: e462752 e4f6534
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 21:28:52 2025 -0700
+
+    Merge pull request #20 from ruzansasuri/change-stycobot-req
+    
+    correct http request
+
+[33mcommit e4f6534e17d3d9a017b6c0aabcbfb01a48666e01[m[33m ([m[1;32mchange-stycobot-req[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 21:28:24 2025 -0700
+
+    correct http request
+
+[33mcommit e46275247cade39ccbcfa384bcd0bfda167cb88c[m
+Merge: 065a87e bf4706c
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 19:19:21 2025 -0700
+
+    Merge pull request #19 from ruzansasuri/stycobot
+    
+    Create a UI for StycoBot and integrate it
+
+[33mcommit bf4706c423484637ee04936a9f2386e606d5c36f[m[33m ([m[1;32mstycobot[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Fri Jun 13 19:16:13 2025 -0700
+
+    Create a UI for StycoBot and integrate it
+
+[33mcommit 065a87ee9816be8033d034483185815816bc864f[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu May 29 20:43:47 2025 -0700
+
+    fix: Update StycoBot project card with correct repository name
+
+[33mcommit f2a4015892420a8e9db7087924d2c97f02698714[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Thu May 29 20:41:33 2025 -0700
+
+    feat: Move StycoBot to be first project
+
+[33mcommit 534fb72e8b0500e5565996b20de5bb27c1634b23[m
+Merge: 0daa6e1 5c73e77
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Jan 22 16:31:50 2025 -0800
+
+    Merge pull request #18 from ruzansasuri/update-projects
+    
+    Update project page
+
+[33mcommit 5c73e7736bc0503cdd09eec5a2fc1136fd4fbc60[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Wed Jan 22 16:31:14 2025 -0800
+
+    Update project page
+    
+    - Remove thumbnail
+    - Add gh card
+    - Change names.
+    - Change description to allow above changes
+
+[33mcommit 0daa6e126170b31d9d2c57de000f62b35ff35140[m
+Merge: 54c2b32 fc7141d
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Jan 21 19:07:51 2025 -0800
+
+    Merge pull request #15 from ruzansasuri/pages/better-projects
+    
+    Some changes to website pages
+
+[33mcommit fc7141de95fb79020a35f151a1620505d068e73c[m[33m ([m[1;32mpages/better-projects[m[33m)[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Jan 21 19:05:39 2025 -0800
+
+    Some changes to website pages
+
+[33mcommit 54c2b32420d95e5b22ba28520c46552b750a529f[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Jan 14 17:09:41 2025 -0800
+
+    Create CNAME
+
+[33mcommit 1e8a5aef6a196dd990088afbda5bb52874b3de3c[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Jan 14 16:57:44 2025 -0800
+
+    better pic handling
+
+[33mcommit b55c3f2432a3ea7f715aaba8809f9e2ca589abc7[m
+Author: Ruzan Sasuri <ruzansasuri@gmail.com>
+Date:   Tue Jan 14 16:29:50 2025 -0800
+
+    move code to top level
